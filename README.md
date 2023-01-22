@@ -1,7 +1,7 @@
 <h5>Test du Microservice inventory-service via le port 9092</h5>
 <img src="captures/products.png">
 <h5>Test du Microservice customer-service via le port 9091</h5>
-<img src="captures/customers.png">
+<img src="captures/customers0.png">
 <h3>Configuration statique de la gateway</h3>
 <p>On a deux manière pour configurer la gateway de manière statique. Soit on utilise un fichier yml ou on utilise la classe de configuration</p>
 <h4>Configuration statique 1 de la gateway dans un fichier yml</h4>
