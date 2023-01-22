@@ -17,8 +17,11 @@ public class GatewayApplication {
     @Bean
     public RouteLocator routes(RouteLocatorBuilder builder){
         return builder.routes()
-                .route(r->r.path("/customers/**").uri("http://localhost:9091"))
-                .route(r->r.path("/products/**").uri("http://localhost:9092")).build();
+                .route(r->r.path("/customers/**").uri("lb://CUSTOMER-SERVICE"))
+                .route(r->r.path("/products/**").uri("lb://INVENTORY-SERVICE"))
+                .build();
+        //lb signifie load balancing
+        //Si on a plusieurs instances du microservice qui sont démarrées la gateway va faire le load-balancing
     }
 
 }
