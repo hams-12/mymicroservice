@@ -23,3 +23,12 @@
 <p>La partie cliente peut accéder à un microservice en connaissant uniquement son nom</p>
 <img src="captures/2-acces-gateway-via-nom-ms.png">
 <img src="captures/3-acces-gateway-via-nom-ms.png">
+<h2>Ajout du microservie billing-service</h2>
+<h4>Affichage de bills dans la base de données</h4>
+<img src="captures/t-billing-service-bd-1.png">
+<img src="captures/t-billing-service-bd-2.png">
+<img src="captures/t-code-methode-fullbill.png">
+<h4>Test de la méthode fullbill depuis l'adresse du microservice</h4>
+<img src="captures/t-test-billing-service-avec-son-port.png">
+<h4>Test de la méthode fullbill depuis la gateway</h4>
+<img src="captures/t-test-billing-service-avec-gateway.png">
