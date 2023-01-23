@@ -1,3 +1,4 @@
+<h1>Partie Backend</h1>
 <h5>Test du Microservice inventory-service via le port 9092</h5>
 <img src="captures/products.png">
 <h5>Test du Microservice customer-service via le port 9091</h5>
@@ -32,3 +33,12 @@
 <img src="captures/t-test-billing-service-avec-son-port.png">
 <h4>Test de la méthode fullbill depuis la gateway</h4>
 <img src="captures/t-test-billing-service-avec-gateway.png">
+<h1>Partie FrontEnd avec angular</h1>
+<h4>Affichage de la liste des customers</h4>
+<img src="captures/angular-customer.png">
+<h4>Affichage de la liste des products</h4>
+<img src="captures/angular-product.png">
+<img src="captures/angular-road-1.png">
+<img src="captures/angular-road-2.png">
+<h4>Affichage de la liste des détails d'une facture</h4>
+<img src="captures/angular-road-3.png">
