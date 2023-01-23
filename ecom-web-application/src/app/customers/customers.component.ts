@@ -19,4 +19,7 @@ export class CustomersComponent implements OnInit {
     });
   }
 
+  /*getBills(c:any) {
+
+  }*/
 }
