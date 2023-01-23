@@ -11,7 +11,7 @@ export class BillsComponent implements OnInit {
 
   bills:any;
   customerId!:number;
-  constructor(private httpClient: HttpClient, private route:ActivatedRoute) {
+  constructor(private httpClient: HttpClient, private route:ActivatedRoute, private router:Router) {
     this.customerId = route.snapshot.params['customerId'];
   }
 
@@ -24,7 +24,7 @@ export class BillsComponent implements OnInit {
     });
   }
 
-  getBillDetails(b: any) {
-    
+  getBillDetails(b: any){
+    this.router.navigateByUrl("/bill-details/"+b.id)
   }
 }

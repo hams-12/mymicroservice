@@ -20,4 +20,12 @@ public class Bill {
     @OneToMany(mappedBy = "bill")
     private List<ProductItem> productItems;
     @Transient private Customer customer; //cette annotation permet d'ignorer cet attribut dans la base de données
+
+    public double getTotal(){
+        double somme = 0;
+        for(ProductItem productItem : productItems){
+            somme+=productItem.getAmount();
+        }
+        return somme;
+    }
 }

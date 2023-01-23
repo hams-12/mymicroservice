@@ -21,7 +21,7 @@ public class BillRestController {
     @Autowired
     private ProductRestClient productRestClient;
 
-    @GetMapping(path = "/fullbill/{id}")
+    @GetMapping(path = "/fullBill/{id}")
     public Bill bill(@PathVariable Long id){
         Bill billl = billRepository.findById(id).get(); //La facture que je recupère ici contient uniquement l'id du customer mais pas toutes ces informations
         billl.setCustomer(customerRestClient.findCustomerById(billl.getCustomerId()));

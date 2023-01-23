@@ -22,4 +22,8 @@ public class ProductItem {
     private double price;
     private double discount;
     @Transient private Product product; //cette annotation permet d'ignorer cet attribut dans la base de données
+
+    public double getAmount(){
+        return price*quantity*(1-discount);
+    }
 }
