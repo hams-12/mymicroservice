@@ -41,4 +41,4 @@
 <img src="captures/angular-road-1.png">
 <img src="captures/angular-road-2.png">
 <h4>Affichage de la liste des détails d'une facture</h4>
-<img src="captures/angular-road-3.png">
+<img src="captures/angular-road-4.png">
