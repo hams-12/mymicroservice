@@ -33,11 +33,23 @@ public class BillingServiceApplication {
                             CustomerRestClient customerRestClient, ProductRestClient productRestClient, RepositoryRestConfiguration restConfiguration){
         return args -> {
             restConfiguration.exposeIdsFor(Bill.class);
-            Collection<Product> products = productRestClient.allProducts().getContent();
+
+            //Collection<Product> products = productRestClient.allProducts().getContent();
+
+            Collection<Product> products = List.of(
+                    Product.builder().id(1L).name("Computer").price(12).quantity(1200).build(),
+                    Product.builder().id(2L).name("Printer").price(32).quantity(120).build(),
+                    Product.builder().id(3L).name("Smartphone").price(31).quantity(900).build()
+            );
 
             Long customerId = 1L;
 
-            Customer customer = customerRestClient.findCustomerById(customerId);
+            //Customer customer = customerRestClient.findCustomerById(customerId);
+            Customer customer = new Customer();
+            customer.setId(customerId);
+            customer.setNom("Hassane");
+            customer.setEmail("hass@gmail.com");
+
             if(customer==null) throw new RuntimeException("Customer Not Found !");
 
             Bill bill = new Bill();

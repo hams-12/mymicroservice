@@ -29,6 +29,7 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
         //on va faire une authentification stateless donc il faut utiliser csrf
         http.csrf().disable();
         http.authorizeRequests().antMatchers("/h2-console/**").permitAll();//Autoriser les requetes vers la base de données h2
+        //http.authorizeRequests().antMatchers("/fullBill/**").hasAuthority("USER");
         http.headers().frameOptions().disable(); //autoriser l'affichage des frames de h2console
         http.authorizeRequests().anyRequest().authenticated(); //signifie que toutes les requetes necessitent l'authentification
     }
