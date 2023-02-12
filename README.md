@@ -12,7 +12,7 @@
 </ul>
 <p>La particularité de billing-service est qu'il va depéndre des deux autres microservices. Pour billing-service, on a va ajouter deux dependances supplémentaires<p>
 <ul>
-<li>OpenFeign qui va nous permettre de faire communiquer les microservices</li>
+<li>OpenFeign qui va nous permettre de faire communiquer les microservices. (utilisation de l'intercepteur)</li>
 <li>Spring HATEOAS</li>
 </ul>
 <img src="captures/architecture.png">
