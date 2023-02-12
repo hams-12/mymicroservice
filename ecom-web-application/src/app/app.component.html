@@ -16,6 +16,25 @@
         </ul>
       </li>
     </ul>
+    <ul class="navbar-nav float-end">
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="securityService.profile; else loginTemplate">
+          <a>{{securityService.profile.firstName}}</a>
+        </a>
+        <ng-template #loginTemplate>
+          <a class="btn nav-link" aria-current="page" (click)="login()">Login</a>
+        </ng-template>
+      </li>
+      <li class="nav-item dropdown" *ngIf="securityService.profile">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" (click)="onLogout()">Logout</a></li>
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </nav>
 
